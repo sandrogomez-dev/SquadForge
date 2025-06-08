@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: squadforge_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: squadforge_db
+      POSTGRES_USER: squadforge_user
+      POSTGRES_PASSWORD: squadforge_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/prisma/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - squadforge_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: squadforge_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - squadforge_network
+
+  # Opcional: Redis Commander para UI de Redis
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: squadforge_redis_ui
+    restart: unless-stopped
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+    networks:
+      - squadforge_network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  squadforge_network:
+    driver: bridge 
