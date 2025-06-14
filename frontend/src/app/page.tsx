@@ -173,6 +173,145 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="px-6 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Precios que se adaptan a ti
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comienza gratis y desbloquea funciones premium cuando estés listo para llevar tu juego al siguiente nivel
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Basic Plan */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-white mb-2">Básico</h3>
+                <div className="text-4xl font-bold text-white mb-4">
+                  $0<span className="text-lg font-normal text-gray-400">/mes</span>
+                </div>
+                <p className="text-gray-300">Perfecto para empezar tu aventura gaming</p>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-300">Búsqueda ilimitada de grupos</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-300">Chat básico en grupos</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-300">Perfil de jugador</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-300">Sistema de reputación</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-300">Hasta 5 grupos simultáneos</span>
+                </li>
+              </ul>
+
+              <button className="w-full bg-white/10 text-white py-3 rounded-lg font-semibold hover:bg-white/20 transition-all">
+                Comenzar Gratis
+              </button>
+            </div>
+
+            {/* Premium Plan */}
+            <div className="bg-gradient-to-b from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/50 hover:border-purple-400 transition-all relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  Más Popular
+                </span>
+              </div>
+              
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-white mb-2">Premium</h3>
+                <div className="text-4xl font-bold text-white mb-4">
+                  $5<span className="text-lg font-normal text-gray-400">/mes</span>
+                </div>
+                <p className="text-gray-300">Para jugadores serios que buscan la mejor experiencia</p>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white">Todo lo del plan Básico</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white">Filtros avanzados de búsqueda</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white">Grupos destacados en búsqueda</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white">Prioridad en matchmaking</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white">Grupos ilimitados</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white">Estadísticas detalladas</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white">Soporte prioritario</span>
+                </li>
+              </ul>
+
+              <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105">
+                Comenzar Premium
+              </button>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-400 mb-4">
+              ¿Tienes un equipo grande? Contáctanos para planes empresariales
+            </p>
+            <button className="text-purple-400 hover:text-purple-300 font-semibold">
+              Hablar con Ventas →
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
